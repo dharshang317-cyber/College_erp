@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-ledger-bg text-ledger-text font-body;
+}
+
+/* Signature element: a "ledger rule" divider styled like a bound register page */
+.ledger-rule {
+  background-image: repeating-linear-gradient(
+    to right,
+    theme("colors.ledger.line") 0,
+    theme("colors.ledger.line") 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  height: 1px;
+}
+
+.eyebrow {
+  @apply font-mono text-[11px] tracking-[0.18em] uppercase text-ledger-muted;
+}
